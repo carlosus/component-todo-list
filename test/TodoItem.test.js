@@ -6,7 +6,6 @@ QUnit.module('todo item');
 
 
 test('template', assert => {
-    console.log(assert);
     const todo = {
         task: 'Buy Avocados',
         completed: false

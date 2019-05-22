@@ -1,6 +1,12 @@
 import Component from './Component.js';
 
 class TodoItem extends Component {
+    render() {
+        const listItem = this.renderDOM();
+        
+        return listItem;
+    }
+
     renderTemplate() {
         const todo = this.props.todo;
 
