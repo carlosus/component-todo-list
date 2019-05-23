@@ -16,7 +16,6 @@ class App extends Component {
 
         const addTodo = new AddTodo({
             onAdd: (newTodo) => {
-                console.log(newTodo);
                 todos.unshift(newTodo);
                 todoList.update({ todos });
             }

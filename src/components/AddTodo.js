@@ -15,7 +15,6 @@ class AddTodo extends Component {
                 task: formData.get('task'),
                 completed: formData.get('completed')
             };
-            console.log(newTodo);
             onAdd(newTodo);
         });
 

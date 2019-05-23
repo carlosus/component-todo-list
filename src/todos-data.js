@@ -1,7 +1,7 @@
 const todos = [
     {
         task: 'Buy Tortilla Chips',
-        completed: true
+        completed: false
     },
     {
         task: 'Buy Avocados',

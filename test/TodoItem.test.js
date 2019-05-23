@@ -13,7 +13,7 @@ test('template', assert => {
 
     const expected = /*html*/ `
         <li>
-            <input type="checkbox" checked>${todo.task}
+            <input type="checkbox" >${todo.task}
         </li>
     `;
 
