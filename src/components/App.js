@@ -1,5 +1,6 @@
 import Component from './Component.js';
 import Header from './Header.js';
+import AddTodo from './AddTodo.js';
 import todos from '../../src/todos-data.js';
 import TodoList from './TodoList.js';
 
@@ -13,8 +14,19 @@ class App extends Component {
         const main = dom.querySelector('main');
         dom.insertBefore(headerDOM, main);
 
-        const todoList = new TodoList({ todos });
+        const addTodo = new AddTodo({
+            onAdd: (newTodo) => {
+                console.log(newTodo);
+                todos.unshift(newTodo);
+                todoList.update({ todos });
+            }
+        });
 
+        const addTodoDOM = addTodo.render();
+        main.appendChild(addTodoDOM);
+
+        const todoList = new TodoList({ todos });
+ 
         const todoListDOM = todoList.render();
         main.appendChild(todoListDOM);
 
