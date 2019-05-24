@@ -13,11 +13,11 @@ const todos = [
     },
     {
         task: 'Buy Tomatoes',
-        completed: false
+        completed: true
     },
     {
         task: 'Buy Jalapeños',
-        completed: false
+        completed: true
     } 
 ];
 

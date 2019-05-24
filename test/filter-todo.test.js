@@ -35,7 +35,8 @@ test('filter by task', assert => {
 
 test('filters on name case insensitive', assert => {
     const filter = {
-        task: 'tor'
+        task: 'TOR',
+        completed: false
     };
 
     const filtered = filterTodos(todos, filter);
@@ -48,7 +49,8 @@ test('filters on name case insensitive', assert => {
 
 test('returns all on no filter', assert => {
     const filter = {
-        task: ''
+        task: '',
+        completed: ''
     };
 
     const filtered = filterTodos(todos, filter);
@@ -58,7 +60,8 @@ test('returns all on no filter', assert => {
 
 test('matches type as well as name', assert => {
     const filter = {
-        task: 'r'
+        task: 'r',
+        completed: false
     };
 
     const filtered = filterTodos(todos, filter);
