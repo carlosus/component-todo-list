@@ -32,3 +32,45 @@ test('filter by task', assert => {
         completed: false
     }]);
 });
+
+test('filters on name case insensitive', assert => {
+    const filter = {
+        task: 'tor'
+    };
+
+    const filtered = filterTodos(todos, filter);
+
+    assert.deepEqual(filtered, [{
+        task: 'Buy Tortilla Chips',
+        completed: false
+    }]);
+});
+
+test('returns all on no filter', assert => {
+    const filter = {
+        task: ''
+    };
+
+    const filtered = filterTodos(todos, filter);
+
+    assert.deepEqual(filtered, todos);
+});
+
+test('matches type as well as name', assert => {
+    const filter = {
+        task: 'r'
+    };
+
+    const filtered = filterTodos(todos, filter);
+
+    assert.deepEqual(filtered, [
+        {
+            task: 'Buy Tortilla Chips',
+            completed: false
+        },
+        {
+            task: 'Buy Red Onions',
+            completed: false
+        }
+    ]);
+});
