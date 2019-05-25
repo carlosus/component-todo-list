@@ -20,6 +20,7 @@ class Component {
 
     update(props) {
         // update the props:
+        props = props || {};
         Object.keys(props).forEach(key => {
             this.props[key] = props[key];
         });

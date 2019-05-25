@@ -13,7 +13,7 @@ class AddTodo extends Component {
 
             const newTodo = {
                 task: formData.get('task'),
-                completed: formData.get('completed')
+                completed: false
             };
             onAdd(newTodo);
         });

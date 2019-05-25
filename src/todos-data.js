@@ -1,11 +1,11 @@
 const todos = [
     {
         task: 'Buy Tortilla Chips',
-        completed: false
+        completed: true
     },
     {
         task: 'Buy Avocados',
-        completed: false
+        completed: true
     },
     {
         task: 'Buy Red Onions',
@@ -13,11 +13,11 @@ const todos = [
     },
     {
         task: 'Buy Tomatoes',
-        completed: true
+        completed: false
     },
     {
         task: 'Buy Jalapeños',
-        completed: true
+        completed: false
     } 
 ];
 

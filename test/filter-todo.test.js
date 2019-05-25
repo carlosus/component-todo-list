@@ -33,7 +33,7 @@ test('filter by task', assert => {
     }]);
 });
 
-test('filters on name case insensitive', assert => {
+test('filters on task case insensitive', assert => {
     const filter = {
         task: 'TOR',
         completed: false
@@ -58,7 +58,7 @@ test('returns all on no filter', assert => {
     assert.deepEqual(filtered, todos);
 });
 
-test('matches type as well as name', assert => {
+test('matches completed as well as task', assert => {
     const filter = {
         task: 'r',
         completed: false
